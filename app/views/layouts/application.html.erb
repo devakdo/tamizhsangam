@@ -57,7 +57,7 @@
     <p class="text-right">
   <p class="container">
   <% if user_signed_in? %>
-    Signed in as <%= current_user.uname %>
+    Signed in as <%= current_user.email %>
     <%= link_to "வெளியேறு", destroy_user_session_path, :method => :delete %>
   <% else %>
     
