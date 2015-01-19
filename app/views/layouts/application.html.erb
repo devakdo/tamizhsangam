@@ -33,6 +33,11 @@
 
         <li><a href="/aboutsite/about"> விவரம் </a></li>
         <li><a href="/aboutsite/contact">தொடர்புக்கு </a></li>
+        <li class="navbar-right" >
+          <% if user_signed_in? %>
+            <%= link_to "வெளியேறு", destroy_user_session_path, :method => :delete %>
+          <% end %>
+        </li>
         <form class="navbar-form navbar-right" role="search">
          
   <div class="form-group">
