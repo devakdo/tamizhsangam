@@ -8,9 +8,8 @@ class GroupsController < ApplicationController
 
 
   def index
-    @groups = Group.all
-    @groups = Group.order(:name)
-  respond_to do |format|
+    @groups = Group.search(params[:search])
+     respond_to do |format|
     format.html
     format.csv { send_data @groups.to_csv }
     format.xls { send_data @groups.to_csv(col_sep: "\t") }
