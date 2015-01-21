@@ -41,10 +41,16 @@
         <form class="navbar-form navbar-right" role="search">
          
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="சங்கங்களை தேடவும்...">
+
+    <%= form_tag groups_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+   
   </div>
-  <button type="submit" class="btn btn-info">தேடு</button>
-</form></ul>
+  </form></ul>
         </div>
         
       
