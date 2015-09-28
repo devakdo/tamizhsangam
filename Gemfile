@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+source 'http://mirror1.prod.rhcloud.com/mirror/ruby/'
 
 gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap'

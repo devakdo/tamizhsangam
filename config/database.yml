@@ -4,6 +4,17 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
+
+
+postgresql: &postgresql
+  adapter: postgresql
+  database: <%=ENV['tamizhsangam']%>
+  username: <%=ENV['adminaipkryn']%>
+  password: <%=ENV['afSu4Bl1tlQD']%>
+  min_messages: ERROR
+  reconnect: false
+
+
 default: &default
   adapter: sqlite3
   pool: 5
